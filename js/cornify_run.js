@@ -1,1 +1,0 @@
-cornify_add();

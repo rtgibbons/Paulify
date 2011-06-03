@@ -1,7 +1,7 @@
-var cornify_count = 0;
-cornify_add = function() {
-	cornify_count += 1;
-	var cornify_url = 'http://www.cornify.com/';
+var paulify_count = 0;
+paulify_add = function() {
+	paulify_count += 1;
+	var paulify_url = 'http://www.plaidirish.com/';
 	var div = document.createElement('div');
 	div.style.position = 'fixed';
 	
@@ -23,11 +23,11 @@ cornify_add = function() {
 		height = Math.round( height*100 )+'%';
 	}
 	
-	div.onclick = cornify_add;
+	div.onclick = paulify_add;
 	div.style.zIndex = 10;
 	div.style.outline = 0;
 	
-	if( cornify_count==15 ) {
+	if( paulify_count==15 ) {
 		div.style.top = Math.max( 0, Math.round( (windowHeight-530)/2 ) )  + 'px';
 		div.style.left = Math.round( (windowWidth-530)/2 ) + 'px';
 		div.style.zIndex = 1000;
@@ -40,8 +40,8 @@ cornify_add = function() {
 	var img = document.createElement('img');
 	var currentTime = new Date();
 	var submitTime = currentTime.getTime();
-	if( cornify_count==15 ) submitTime = 0;
-	img.setAttribute('src',cornify_url+'getacorn.php?r=' + submitTime + '&url='+document.location.href);
+	if( paulify_count==15 ) submitTime = 0;
+	img.setAttribute('src',paulify_url+'pualify.php?r=' + submitTime + '&url='+document.location.href);
 	var ease = "all .1s linear";
 	//div.style['-webkit-transition'] = ease;
 	//div.style.webkitTransition = ease;
@@ -75,23 +75,23 @@ cornify_add = function() {
 	div.appendChild(img);	
 	
 	// Add stylesheet.
-	if (cornify_count == 5) {
-		var cssExisting = document.getElementById('__cornify_css');
+	if (paulify_count == 5) {
+		var cssExisting = document.getElementById('__paulify_css');
 		if (!cssExisting) {
 			var head = document.getElementsByTagName("head")[0];
 			var css = document.createElement('link');
-			css.id = '__cornify_css';
+			css.id = '__paulify_css';
 			css.type = 'text/css';
 			css.rel = 'stylesheet';
-			css.href = 'http://www.cornify.com/css/cornify.css';
+			css.href = 'http://www.paulify.com/css/cornify.css';
 			css.media = 'screen';
 			head.appendChild(css);
 		}
-		cornify_replace();
+		paulify_replace();
 	}	
 }
 
-cornify_replace = function() {
+paulify_replace = function() {
 	// Replace text.
 	var hc = 6, hs, h, k;
 	var words = ['Happy','Sparkly','Glittery','Fun','Magical','Lovely','Cute','Charming','Amazing','Wonderful'];
@@ -108,28 +108,28 @@ cornify_replace = function() {
 /*
  * Adapted from http://www.snaptortoise.com/konami-js/
  */
-var cornami = {
+var paulami = {
 	input:"",
 	pattern:"38384040373937396665",
-	clear:setTimeout('cornami.clear_input()',5000),
+	clear:setTimeout('paulami.clear_input()',5000),
 	load: function() {
 		window.document.onkeydown = function(e) {
-			if (cornami.input == cornami.pattern) {
-				cornify_add();
-				clearTimeout(cornami.clear);
+			if (paulami.input == cornami.pattern) {
+				paulify_add();
+				clearTimeout(paulami.clear);
 				return;
 			}
 			else {
-				cornami.input += e ? e.keyCode : event.keyCode;
-				if (cornami.input == cornami.pattern) cornify_add();
-				clearTimeout(cornami.clear);
-				cornami.clear = setTimeout("cornami.clear_input()", 5000);
+				paulami.input += e ? e.keyCode : event.keyCode;
+				if (paulami.input == cornami.pattern) cornify_add();
+				clearTimeout(paulami.clear);
+				paulami.clear = setTimeout("cornami.clear_input()", 5000);
 			}
 		}
 	},
 	clear_input: function() {
-		cornami.input="";
-		clearTimeout(cornami.clear);
+		paulami.input="";
+		clearTimeout(paulami.clear);
 	}
 }
-cornami.load();
+paulami.load();
