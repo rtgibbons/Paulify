@@ -41,7 +41,7 @@ paulify_add = function() {
 	var currentTime = new Date();
 	var submitTime = currentTime.getTime();
 	if( paulify_count==15 ) submitTime = 0;
-	img.setAttribute('src',paulify_url+'pualify.php?r=' + submitTime + '&url='+document.location.href);
+	img.setAttribute('src',paulify_url+'paulify.php?r=' + submitTime + '&url='+document.location.href);
 	var ease = "all .1s linear";
 	//div.style['-webkit-transition'] = ease;
 	//div.style.webkitTransition = ease;
@@ -83,7 +83,7 @@ paulify_add = function() {
 			css.id = '__paulify_css';
 			css.type = 'text/css';
 			css.rel = 'stylesheet';
-			css.href = 'http://www.paulify.com/css/cornify.css';
+			css.href = 'http://www.plaidirish.com/css/cornify.css';
 			css.media = 'screen';
 			head.appendChild(css);
 		}
