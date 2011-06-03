@@ -83,7 +83,7 @@ paulify_add = function() {
 			css.id = '__paulify_css';
 			css.type = 'text/css';
 			css.rel = 'stylesheet';
-			css.href = 'http://www.plaidirish.com/css/cornify.css';
+			css.href = 'http://www.plaidirish.com/cornify.css';
 			css.media = 'screen';
 			head.appendChild(css);
 		}
