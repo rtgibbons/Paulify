@@ -49,7 +49,6 @@ paulify_add = function() {
 	div.style.WebkitTransform = "rotate(1deg) scale(1.01,1.01)";
 	//div.style.MozTransition = "all .1s linear";
 	div.style.transition = "all .1s linear";
-  div.style.
 	div.onmouseover = function() {
 		var size = 1+Math.round(Math.random()*10)/100;
 		var angle = Math.round(Math.random()*20-10);
