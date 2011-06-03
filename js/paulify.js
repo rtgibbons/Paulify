@@ -6,7 +6,7 @@ paulify_add = function() {
 	div.style.position = 'fixed';
 	
 	var numType = 'px';
-	var heightRandom = Math.random()*.75;
+	var heightRandom = Math.random()*0.75;
 	var windowHeight = 768;
 	var windowWidth = 1024;
 	var height = 0;
@@ -60,9 +60,9 @@ paulify_add = function() {
 		this.style.WebkitTransform = result;
 		//this.style.MozTransform = result;
 		//alert(this + ' | ' + result);
-	}
+	};
 	div.onmouseout = function() {
-		var size = .9+Math.round(Math.random()*10)/100;
+		var size = 0.9+Math.round(Math.random()*10)/100;
 		var angle = Math.round(Math.random()*6-3);
 		var result = "rotate("+angle+"deg) scale("+size+","+size+")";
 		this.style.transform = result;	
@@ -70,7 +70,7 @@ paulify_add = function() {
 		//this.style.webkitTransform = result;
 		this.style.WebkitTransform = result;
 		//this.style.MozTransform = result;
-	}
+	};
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(div);
 	div.appendChild(img);	
@@ -90,7 +90,7 @@ paulify_add = function() {
 		}
 		paulify_replace();
 	}	
-}
+};
 
 paulify_replace = function() {
 	// Replace text.
@@ -104,7 +104,7 @@ paulify_replace = function() {
 		}
 		hc-=1;
 	}
-}
+};
 
 /*
  * Adapted from http://www.snaptortoise.com/konami-js/
@@ -126,11 +126,11 @@ var paulami = {
 				clearTimeout(paulami.clear);
 				paulami.clear = setTimeout("paulami.clear_input()", 5000);
 			}
-		}
+		};
 	},
 	clear_input: function() {
 		paulami.input="";
 		clearTimeout(paulami.clear);
 	}
-}
+};
 paulami.load();
