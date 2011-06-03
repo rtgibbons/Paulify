@@ -49,6 +49,7 @@ paulify_add = function() {
 	div.style.WebkitTransform = "rotate(1deg) scale(1.01,1.01)";
 	//div.style.MozTransition = "all .1s linear";
 	div.style.transition = "all .1s linear";
+  div.style.
 	div.onmouseover = function() {
 		var size = 1+Math.round(Math.random()*10)/100;
 		var angle = Math.round(Math.random()*20-10);
@@ -83,7 +84,7 @@ paulify_add = function() {
 			css.id = '__paulify_css';
 			css.type = 'text/css';
 			css.rel = 'stylesheet';
-			css.href = 'http://www.plaidirish.com/cornify.css';
+			css.href = 'http://www.plaidirish.com/paulify.css';
 			css.media = 'screen';
 			head.appendChild(css);
 		}
@@ -114,16 +115,16 @@ var paulami = {
 	clear:setTimeout('paulami.clear_input()',5000),
 	load: function() {
 		window.document.onkeydown = function(e) {
-			if (paulami.input == cornami.pattern) {
+			if (paulami.input == paulami.pattern) {
 				paulify_add();
 				clearTimeout(paulami.clear);
 				return;
 			}
 			else {
 				paulami.input += e ? e.keyCode : event.keyCode;
-				if (paulami.input == cornami.pattern) cornify_add();
+				if (paulami.input == paulami.pattern) paulify_add();
 				clearTimeout(paulami.clear);
-				paulami.clear = setTimeout("cornami.clear_input()", 5000);
+				paulami.clear = setTimeout("paulami.clear_input()", 5000);
 			}
 		}
 	},
